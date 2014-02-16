@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <input type="text" class="inputs" id="first_textbox" disabled>
+  <input type="text" class="inputs" required>
+  <input type="checkbox" id="ch">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <script type="text/javascript" src="../jquery.toggleProperty.js"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function(){
+      /*
+        <input type="text" class="inputs" id="first_textbox">
+        <input type="text" class="inputs" required disabled>
+      */
+      $('.inputs').toggleProperty("disabled");
+
+      /*
+        <input type="checkbox" id="ch" checked>
+      */ 
+      $('#ch').toggleProperty("checked");
+    });
+  </script>
+</body>
+</html>
